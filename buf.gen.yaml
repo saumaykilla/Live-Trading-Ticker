@@ -1,0 +1,6 @@
+version: v2
+plugins:
+  - local: protoc-gen-es
+    out: proto/connect # relative to proto folder
+    include_imports: true
+    opt: target=ts

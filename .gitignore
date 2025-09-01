@@ -40,9 +40,8 @@ build/
 *.sublime-project
 
 # Buf generated code (optional: if you regenerate locally)
-buf.gen.yaml
 **/*.pb.ts
-**/*.connect.ts
+**/connect
 
 # Temporary files
 *.tmp
