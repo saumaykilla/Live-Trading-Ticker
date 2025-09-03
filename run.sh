@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Starting Project Pluto - Fullstack Application"
+echo "🚀 Starting Live Trading Ticker - Fullstack Application"
 
 # Default ports
 BACKEND_PORT=8080
