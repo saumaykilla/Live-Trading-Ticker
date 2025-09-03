@@ -4,15 +4,31 @@ package proto.trading.v1;
 
 
 message StreamPricesRequest {
-  string ticker = 1;
+  string client_id = 1; 
 }
 
 message StreamPricesResponse {
   string ticker = 1;
-  float price = 2;
+  string price = 2;
+  string error = 3;
 }
 
+message ModifyTickersRequest {
+  string client_id = 1;
+  string add = 2;
+  string remove = 3;
+}
+
+message ModifyTickersResponse {
+  bool success = 1;
+}
 
 service TradingService {
   rpc StreamPrices (StreamPricesRequest) returns (stream StreamPricesResponse);
+  
+  rpc ModifyTickers (ModifyTickersRequest) returns (ModifyTickersResponse);
+
+
 }
+
+

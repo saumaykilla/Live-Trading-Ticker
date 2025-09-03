@@ -39,7 +39,6 @@ pnpm dev &
 BACKEND_PID=$!
 cd ..
 
-sleep 5
 if ! kill -0 $BACKEND_PID 2>/dev/null; then
     echo "❌ Backend failed to start. Exiting."
     cleanup
